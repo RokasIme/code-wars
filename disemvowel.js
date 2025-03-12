@@ -12,8 +12,15 @@ Note: for this kata y isn't considered a vowel.
 
 function disemvowel(str) {
   let vovels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];
+  const strSplit = str.split("");
+  const newArr = [];
+  for (let i = 0; i < strSplit.length; i++) {
+    if (!vovels.includes(strSplit[i])) {
+      newArr.push(strSplit[i]);
+    }
+  }
 
-  return str;
+  return newArr.join("");
 }
 
 console.log(
